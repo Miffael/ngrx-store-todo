@@ -1,0 +1,13 @@
+<div class="wrap" *ngIf="notices.length">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--0 mdl-cell--2-col-tablet mdl-cell--3-col-desktop"></div>
+    <div class="mdl-cell mdl-cell--12-col mdl-cell-8-col-tablet mdl-cell--6-col-desktop">
+      <div class="filterButtonRow">
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" (click)="setVisualFilter(filterStage.SHOW_ALL)" [ngClass]="{'mdl-button--accent': visualFilter === filterStage.SHOW_ALL}">All</button>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" (click)="setVisualFilter(filterStage.SHOW_ACTIVE)" [ngClass]="{'mdl-button--accent': visualFilter === filterStage.SHOW_ACTIVE}">Active</button>
+        <button class="mdl-button mdl-js-button mdl-js-ripple-effect" (click)="setVisualFilter(filterStage.SHOW_COMPLETED)" [ngClass]="{'mdl-button--accent': visualFilter === filterStage.SHOW_COMPLETED}">Completed</button>
+      </div>
+    </div>
+  </div>
+
+</div>

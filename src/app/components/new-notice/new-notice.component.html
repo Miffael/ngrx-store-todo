@@ -1,0 +1,26 @@
+<div class="wrap">
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--0 mdl-cell--2-col-tablet mdl-cell--3-col-desktop"></div>
+    <div class="mdl-cell mdl-cell--12-col mdl-cell-8-col-tablet mdl-cell--6-col-desktop">
+      <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col mdl-cell--middle text-center">
+          <button class="mdl-button mdl-js-button mdl-button--icon mdl-button--primary" (click)="toggleAllStatus()" *ngIf="notices.length">
+            <i class="material-icons" *ngIf="!statusUnchecked">check_box_outline_blank</i>
+            <i class="material-icons" *ngIf="statusUnchecked">check_box</i>
+          </button>
+        </div>
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--middle">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="newNotice" name="newNotice" (keyup)="checkKeyEnter($event) && addNotice()" [(ngModel)]="newNotice">
+            <label class="mdl-textfield__label" for="newNotice">New notice</label>
+          </div>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--middle text-center">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="addNotice()">
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
